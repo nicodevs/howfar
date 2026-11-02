@@ -1,0 +1,51 @@
+{
+  "name": "@nicodevs/howfar",
+  "version": "0.1.0",
+  "description": "How far any city is from yours, as JSON.",
+  "keywords": [
+    "cities",
+    "cli",
+    "distance",
+    "geocoding",
+    "json"
+  ],
+  "homepage": "https://github.com/nicodevs/howfar#readme",
+  "bugs": "https://github.com/nicodevs/howfar/issues",
+  "license": "MIT",
+  "author": "Nico Devs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicodevs/howfar.git"
+  },
+  "bin": {
+    "howfar": "dist/howfar.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "lint": "vp lint",
+    "format": "vp fmt",
+    "test": "vp test run",
+    "type-check": "tsc --noEmit",
+    "build": "vp run type-check && vp pack",
+    "prepare": "vp config --no-agent",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.8.1",
+    "citty": "^0.2.2",
+    "rc9": "^3.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "npm:@voidzero-dev/vite-plus-core@^1.4.0",
+    "vite-plus": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
